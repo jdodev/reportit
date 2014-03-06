@@ -8,6 +8,7 @@ urlpatterns = patterns('',
     url(r'^API/getreports/$', views.getreports, name='getreports'),
 
     url(r'^http://dbriones.com/sitios/reportit/API/getreports/$', views.getreports, name='getreports'),
+    url(r'^sitios/reportit/API/getreports/$', views.getreports, name='getreports'),
     
     url(r'^API/getcategories/$', views.getcategories, name='getcategories')
     url(r'^API/getcountries/$', views.getcountries, name='getcountries')
