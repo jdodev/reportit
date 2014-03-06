@@ -44,3 +44,38 @@ def getreports(request):
 
 	respuesta = {'success':True, 'message':'Success.', 'version':'v1', 'data':lstReports}
 	return HttpResponse(json.dumps(respuesta), content_type='application/json')
+
+def getcategories(request):
+	resCategories = Categories.objects.all()
+
+	lstCategories = []
+
+	for cCategories in resCategories:
+		dctCategories = {
+		"CategoryID":cCategories.CategoryID,
+		"Category":cCategories.Category,
+		}
+		lstCategories.append(dctCategories)
+
+	respuesta = {'success':True, 'message':'Success.', 'version':'v1', 'data':lstCategories}
+	return HttpResponse(json.dumps(respuesta), content_type='application/json')
+
+def getcountries(request):
+	resCountries = Country.objects.all()
+
+	lstCountries = []
+
+	for cCountry in resCountries:
+		dctCountries = {
+		"CountryID":cCountry.CountryID,
+		"Country":cCountry.Country,
+		}
+		lstCountries.append(dctCountries)
+
+	respuesta = {'success':True, 'message':'Success.', 'version':'v1', 'data':lstCountries}
+	return HttpResponse(json.dumps(respuesta), content_type='application/json')
+
+
+
+
+
