@@ -13,7 +13,7 @@ def getreports(request):
 	qLong = request.GET.get('qLong', False)
 
 	qLatMax = float(qLat) + 0.4000000
-	qLatMax = float(qLat) + 0.4000000
+	qLatMin = float(qLat) - 0.4000000
 
 	qLongMax = float(qLong) + 0.4000000
 	qLongMin = float(qLong) - 0.4000000
